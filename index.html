@@ -31,7 +31,6 @@
     overflow-x: hidden;
   }
 
-  /* SCANLINE TEXTURE */
   body::after {
     content: '';
     position: fixed;
@@ -47,7 +46,6 @@
     z-index: 999;
   }
 
-  /* GLOW BG */
   .glow-bg {
     position: fixed;
     inset: 0;
@@ -58,7 +56,6 @@
     z-index: 0;
   }
 
-  /* NAV */
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -79,7 +76,6 @@
     color: var(--text);
     text-decoration: none;
   }
-
   .nav-logo span { color: var(--accent); }
 
   .nav-links { display: flex; gap: 2rem; }
@@ -93,7 +89,6 @@
   }
   .nav-links a:hover { color: var(--accent); }
 
-  /* HERO */
   .hero {
     position: relative;
     min-height: 100vh;
@@ -104,7 +99,6 @@
     overflow: hidden;
   }
 
-  /* GRID LINES */
   .hero::before {
     content: '';
     position: absolute;
@@ -163,7 +157,6 @@
     opacity: 0;
     animation: fadeUp 0.5s 0.25s forwards;
   }
-
   .hero-name .line2 { color: var(--accent); }
 
   .hero-role {
@@ -225,7 +218,6 @@
   }
   .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
 
-  /* HERO CARD */
   .hero-card {
     background: var(--panel);
     border: 1px solid var(--border);
@@ -236,7 +228,6 @@
     opacity: 0;
     animation: fadeUp 0.6s 0.8s forwards;
   }
-
   .hero-card::before {
     content: '';
     position: absolute;
@@ -290,7 +281,6 @@
     color: var(--accent);
     letter-spacing: 0.05em;
   }
-
   .stat-lbl { font-size: 0.72rem; color: var(--muted); margin-top: 1px; }
 
   .contact-list {
@@ -320,7 +310,6 @@
     flex-shrink: 0;
   }
 
-  /* SECTIONS */
   section {
     position: relative;
     z-index: 1;
@@ -359,7 +348,6 @@
     margin: 0 3rem;
   }
 
-  /* TIMELINE */
   .timeline { padding-left: 1.5rem; position: relative; }
   .timeline::before {
     content: '';
@@ -377,7 +365,6 @@
     transform: translateX(-15px);
     transition: all 0.4s;
   }
-
   .tl-item.visible { opacity: 1; transform: translateX(0); }
 
   .tl-dot {
@@ -391,39 +378,13 @@
     box-shadow: 0 0 0 3px rgba(0,212,255,0.15);
   }
 
-  .tl-date {
-    font-size: 0.72rem;
-    color: var(--accent);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-bottom: 0.3rem;
-    font-weight: 500;
-  }
-
-  .tl-role {
-    font-weight: 600;
-    font-size: 1rem;
-    margin-bottom: 0.2rem;
-  }
-
-  .tl-company {
-    font-size: 0.85rem;
-    color: var(--muted);
-    margin-bottom: 0.7rem;
-  }
-
+  .tl-date { font-size: 0.72rem; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.3rem; font-weight: 500; }
+  .tl-role { font-weight: 600; font-size: 1rem; margin-bottom: 0.2rem; }
+  .tl-company { font-size: 0.85rem; color: var(--muted); margin-bottom: 0.7rem; }
   .tl-bullets { list-style: none; }
-  .tl-bullets li {
-    font-size: 0.85rem;
-    color: var(--muted);
-    padding-left: 1rem;
-    position: relative;
-    line-height: 1.6;
-    margin-bottom: 0.3rem;
-  }
+  .tl-bullets li { font-size: 0.85rem; color: var(--muted); padding-left: 1rem; position: relative; line-height: 1.6; margin-bottom: 0.3rem; }
   .tl-bullets li::before { content: '›'; position: absolute; left: 0; color: var(--accent); }
 
-  /* SKILLS GRID */
   .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -439,44 +400,15 @@
     opacity: 0;
     transform: translateY(15px);
   }
-
   .sk-card.visible { opacity: 1; transform: translateY(0); }
   .sk-card:hover { border-color: rgba(0,212,255,0.25); background: rgba(0,212,255,0.03); }
 
-  .sk-icon {
-    width: 36px; height: 36px;
-    border-radius: 9px;
-    background: rgba(0,212,255,0.1);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1rem;
-    margin-bottom: 0.9rem;
-  }
-
-  .sk-title {
-    font-weight: 600;
-    font-size: 0.88rem;
-    margin-bottom: 0.7rem;
-    letter-spacing: 0.03em;
-  }
-
+  .sk-icon { width: 36px; height: 36px; border-radius: 9px; background: rgba(0,212,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 1rem; margin-bottom: 0.9rem; }
+  .sk-title { font-weight: 600; font-size: 0.88rem; margin-bottom: 0.7rem; letter-spacing: 0.03em; }
   .tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
-  .tag {
-    font-size: 0.72rem;
-    padding: 0.2rem 0.6rem;
-    border-radius: 4px;
-    background: rgba(255,255,255,0.04);
-    color: var(--muted);
-    border: 1px solid var(--border);
-  }
+  .tag { font-size: 0.72rem; padding: 0.2rem 0.6rem; border-radius: 4px; background: rgba(255,255,255,0.04); color: var(--muted); border: 1px solid var(--border); }
 
-  /* CERTS */
-  .certs-row {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    margin-bottom: 3rem;
-  }
-
+  .certs-row { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem; }
   .cert-badge {
     display: flex;
     align-items: center;
@@ -489,87 +421,28 @@
     transform: translateY(10px);
     transition: all 0.3s;
   }
-
   .cert-badge.visible { opacity: 1; transform: translateY(0); }
-
-  .cert-icon {
-    width: 34px; height: 34px;
-    border-radius: 8px;
-    background: rgba(0,212,255,0.1);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 0.9rem;
-    flex-shrink: 0;
-  }
-
+  .cert-icon { width: 34px; height: 34px; border-radius: 8px; background: rgba(0,212,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 0.9rem; flex-shrink: 0; }
   .cert-name { font-weight: 600; font-size: 0.9rem; }
   .cert-sub { font-size: 0.75rem; color: var(--muted); }
 
-  /* FORMATION */
-  .formation-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.2rem;
-  }
-
-  .form-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 1.6rem;
-    opacity: 0;
-    transform: translateY(15px);
-    transition: all 0.4s;
-  }
-
+  .formation-list { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+  .form-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.6rem; opacity: 0; transform: translateY(15px); transition: all 0.4s; }
   .form-card.visible { opacity: 1; transform: translateY(0); }
-
-  .form-year {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.8rem;
-    color: var(--accent);
-    letter-spacing: 0.05em;
-    margin-bottom: 0.3rem;
-  }
-
+  .form-year { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; color: var(--accent); letter-spacing: 0.05em; margin-bottom: 0.3rem; }
   .form-title { font-weight: 600; font-size: 0.92rem; margin-bottom: 0.3rem; }
   .form-school { font-size: 0.82rem; color: var(--muted); }
 
-  /* CONTACT */
   .contact-wrap {
     background: var(--panel);
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
     padding: 5rem 3rem;
   }
-
-  .contact-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    align-items: center;
-  }
-
+  .contact-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
   .contact-items { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
-
-  .ci-item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    font-size: 0.88rem;
-  }
-
-  .ci-icon {
-    width: 40px; height: 40px;
-    border-radius: 10px;
-    background: rgba(0,212,255,0.08);
-    border: 1px solid rgba(0,212,255,0.15);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1rem;
-    flex-shrink: 0;
-  }
-
+  .ci-item { display: flex; align-items: center; gap: 1rem; font-size: 0.88rem; }
+  .ci-icon { width: 40px; height: 40px; border-radius: 10px; background: rgba(0,212,255,0.08); border: 1px solid rgba(0,212,255,0.15); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
   .ci-lbl { font-size: 0.72rem; color: var(--muted); }
   .ci-val { font-weight: 500; }
 
@@ -582,28 +455,87 @@
     position: relative;
     overflow: hidden;
   }
+  .cta-box::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--accent), var(--accent2)); }
+  .cta-box h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; letter-spacing: 0.05em; margin-bottom: 0.7rem; }
+  .cta-box p { color: var(--muted); font-size: 0.88rem; line-height: 1.7; margin-bottom: 1.8rem; }
 
-  .cta-box::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--accent), var(--accent2));
+  /* ======= SECTION DOCUMENTS PROTÉGÉS ======= */
+  .docs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.2rem;
+    margin-top: 2rem;
   }
 
-  .cta-box h3 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.6rem;
-    letter-spacing: 0.05em;
-    margin-bottom: 0.7rem;
+  .doc-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: border-color 0.3s;
   }
+  .doc-card:hover { border-color: rgba(0,212,255,0.25); }
 
-  .cta-box p {
-    color: var(--muted);
-    font-size: 0.88rem;
-    line-height: 1.7;
-    margin-bottom: 1.8rem;
+  .doc-card-head {
+    padding: 1.3rem 1.5rem;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: rgba(255,255,255,0.02);
   }
+  .doc-icon { font-size: 1.4rem; }
+  .doc-title { font-weight: 600; font-size: 0.9rem; }
+  .doc-sub { font-size: 0.75rem; color: var(--muted); margin-top: 2px; }
+
+  .doc-card-body { padding: 1.3rem 1.5rem; }
+
+  .doc-lock-area { display: block; }
+  .doc-open-area { display: none; }
+  .doc-open-area.visible { display: block; }
+  .doc-lock-area.hidden { display: none; }
+
+  .pw-input {
+    width: 100%;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.6rem 0.9rem;
+    color: var(--text);
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    outline: none;
+    transition: border-color 0.2s;
+    margin-bottom: 0.6rem;
+  }
+  .pw-input:focus { border-color: var(--accent); }
+  .pw-input.error { border-color: #ef4444; animation: shake 0.3s; }
+
+  @keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-5px)} 75%{transform:translateX(5px)} }
+
+  .err-msg { color: #ef4444; font-size: 0.75rem; margin-bottom: 0.5rem; display: none; }
+  .btn-unlock { width: 100%; padding: 0.6rem; background: var(--accent); color: #000; border: none; border-radius: 6px; font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+  .btn-unlock:hover { background: #00b8d9; }
+
+  .doc-dl-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    width: 100%;
+    padding: 0.7rem 1rem;
+    background: rgba(0,212,255,0.07);
+    border: 1px solid rgba(0,212,255,0.2);
+    border-radius: 8px;
+    color: var(--accent);
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s;
+    margin-bottom: 0.5rem;
+  }
+  .doc-dl-btn:hover { background: rgba(0,212,255,0.12); border-color: rgba(0,212,255,0.35); }
 
   /* CV PROTÉGÉ */
   .cv-lock {
@@ -615,163 +547,106 @@
     margin: 3rem auto 0;
     text-align: center;
   }
-
-  .lock-icon {
-    width: 56px; height: 56px;
-    background: rgba(0,212,255,0.08);
-    border: 1px solid rgba(0,212,255,0.2);
-    border-radius: 14px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.4rem;
-    margin: 0 auto 1.3rem;
-  }
-
+  .lock-icon { width: 56px; height: 56px; background: rgba(0,212,255,0.08); border: 1px solid rgba(0,212,255,0.2); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin: 0 auto 1.3rem; }
   .cv-lock h3 { font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem; }
   .cv-lock p { color: var(--muted); font-size: 0.85rem; line-height: 1.6; margin-bottom: 1.5rem; }
-
   .input-row { display: flex; gap: 0.6rem; }
-
-  .pw-input {
-    flex: 1;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 0.7rem 1rem;
-    color: var(--text);
-    font-family: 'Outfit', sans-serif;
-    font-size: 0.88rem;
-    outline: none;
-    transition: border-color 0.2s;
-  }
-
-  .pw-input:focus { border-color: var(--accent); }
-  .pw-input.error { border-color: #ef4444; animation: shake 0.3s; }
-
-  @keyframes shake {
-    0%,100%{transform:translateX(0)}
-    25%{transform:translateX(-5px)}
-    75%{transform:translateX(5px)}
-  }
-
-  .err-msg { color: #ef4444; font-size: 0.78rem; margin-top: 0.5rem; display: none; }
-
+  .pw-input-cv { flex: 1; background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 6px; padding: 0.7rem 1rem; color: var(--text); font-family: 'Outfit', sans-serif; font-size: 0.88rem; outline: none; transition: border-color 0.2s; }
+  .pw-input-cv:focus { border-color: var(--accent); }
+  .pw-input-cv.error { border-color: #ef4444; animation: shake 0.3s; }
+  .err-msg-cv { color: #ef4444; font-size: 0.78rem; margin-top: 0.5rem; display: none; }
   .cv-content { display: none; margin-top: 3rem; }
   .cv-content.visible { display: block; }
 
-  /* CV FRAME */
-  .cv-frame {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    overflow: hidden;
-  }
-
-  .cv-frame-head {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.1rem 1.6rem;
-    border-bottom: 1px solid var(--border);
-    background: rgba(255,255,255,0.02);
-  }
-
-  .cv-frame-title {
-    font-weight: 600;
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
+  .cv-frame { background: var(--card); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+  .cv-frame-head { display: flex; align-items: center; justify-content: space-between; padding: 1.1rem 1.6rem; border-bottom: 1px solid var(--border); background: rgba(255,255,255,0.02); }
+  .cv-frame-title { font-weight: 600; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
   .cv-frame-title span { color: var(--muted); font-weight: 300; font-size: 0.8rem; }
-
-  .cv-body {
-    padding: 2.5rem;
-    display: grid;
-    grid-template-columns: 240px 1fr;
-    gap: 2.5rem;
-  }
-
-  .cv-left {
-    background: rgba(0,212,255,0.03);
-    border: 1px solid rgba(0,212,255,0.08);
-    border-radius: 12px;
-    padding: 1.6rem;
-  }
-
-  .cv-av {
-    width: 60px; height: 60px;
-    border-radius: 12px;
-    background: linear-gradient(135deg, var(--accent), var(--accent2));
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.2rem;
-    color: #000;
-    margin: 0 auto 1.3rem;
-  }
-
-  .cv-sh {
-    font-size: 0.68rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--accent);
-    border-bottom: 1px solid rgba(0,212,255,0.15);
-    padding-bottom: 0.35rem;
-    margin-bottom: 0.8rem;
-    margin-top: 1.3rem;
-    font-weight: 600;
-  }
-
+  .cv-body { padding: 2.5rem; display: grid; grid-template-columns: 240px 1fr; gap: 2.5rem; }
+  .cv-left { background: rgba(0,212,255,0.03); border: 1px solid rgba(0,212,255,0.08); border-radius: 12px; padding: 1.6rem; }
+  .cv-av { width: 60px; height: 60px; border-radius: 12px; background: linear-gradient(135deg, var(--accent), var(--accent2)); display: flex; align-items: center; justify-content: center; font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; color: #000; margin: 0 auto 1.3rem; }
+  .cv-sh { font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); border-bottom: 1px solid rgba(0,212,255,0.15); padding-bottom: 0.35rem; margin-bottom: 0.8rem; margin-top: 1.3rem; font-weight: 600; }
   .cv-li { font-size: 0.78rem; color: var(--muted); margin-bottom: 0.4rem; line-height: 1.5; }
   .cv-li strong { color: var(--text); display: block; font-weight: 500; }
-
   .cv-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; }
-  .cv-tag {
-    font-size: 0.68rem;
-    padding: 0.18rem 0.5rem;
-    border-radius: 4px;
-    background: rgba(0,212,255,0.08);
-    color: var(--accent);
-    border: 1px solid rgba(0,212,255,0.15);
-  }
-
-  .cv-right {}
-
-  .cv-name {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.2rem;
-    letter-spacing: 0.05em;
-    margin-bottom: 0.2rem;
-  }
-
+  .cv-tag { font-size: 0.68rem; padding: 0.18rem 0.5rem; border-radius: 4px; background: rgba(0,212,255,0.08); color: var(--accent); border: 1px solid rgba(0,212,255,0.15); }
+  .cv-name { font-family: 'Bebas Neue', sans-serif; font-size: 2.2rem; letter-spacing: 0.05em; margin-bottom: 0.2rem; }
   .cv-subtitle { color: var(--accent); font-size: 0.85rem; font-weight: 500; letter-spacing: 0.05em; margin-bottom: 0.8rem; }
-
   .cv-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.7; margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
-
   .cv-exp-item { margin-bottom: 1.3rem; }
   .cv-exp-role { font-weight: 600; font-size: 0.9rem; margin-bottom: 0.15rem; }
   .cv-exp-co { font-size: 0.78rem; color: var(--accent); margin-bottom: 0.45rem; }
   .cv-exp-ul { list-style: none; }
-  .cv-exp-ul li {
-    font-size: 0.78rem; color: var(--muted); padding-left: 0.9rem;
-    position: relative; line-height: 1.6; margin-bottom: 0.2rem;
-  }
+  .cv-exp-ul li { font-size: 0.78rem; color: var(--muted); padding-left: 0.9rem; position: relative; line-height: 1.6; margin-bottom: 0.2rem; }
   .cv-exp-ul li::before { content: '›'; position: absolute; left: 0; color: var(--accent); }
 
-  footer {
-    text-align: center;
-    padding: 2rem;
-    font-size: 0.78rem;
-    color: var(--muted);
-    border-top: 1px solid var(--border);
-    position: relative;
-    z-index: 1;
+  /* VEILLE IA */
+  .veille-theme-box {
+    background: linear-gradient(135deg, rgba(0,60,100,0.5), rgba(0,30,60,0.6));
+    border: 1px solid rgba(0,212,255,0.25);
+    border-radius: 14px;
+    padding: 2rem 2.5rem;
+    margin-bottom: 3rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.5rem;
+    align-items: center;
   }
 
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+  .veille-shield {
+    width: 56px; height: 56px;
+    background: rgba(0,212,255,0.12);
+    border: 1px solid rgba(0,212,255,0.3);
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
   }
+
+  .veille-theme-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+    margin-bottom: 0.3rem;
+  }
+
+  .veille-theme-sub { font-size: 0.88rem; color: var(--muted); }
+
+  .veille-4grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    margin-bottom: 3rem;
+  }
+
+  .veille-card {
+    background: linear-gradient(135deg, rgba(0,40,80,0.5), rgba(0,20,50,0.4));
+    border: 1px solid rgba(0,212,255,0.12);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: border-color 0.3s;
+  }
+  .veille-card:hover { border-color: rgba(0,212,255,0.3); }
+
+  .veille-card-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--accent);
+    margin-bottom: 0.8rem;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .veille-card p {
+    font-size: 0.83rem;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  footer { text-align: center; padding: 2rem; font-size: 0.78rem; color: var(--muted); border-top: 1px solid var(--border); position: relative; z-index: 1; }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
   @media (max-width: 900px) {
     .hero-content { grid-template-columns: 1fr; gap: 3rem; }
@@ -783,6 +658,8 @@
     .hero { padding: 7rem 1.5rem 4rem; }
     .cv-body { grid-template-columns: 1fr; }
     .contact-wrap { padding: 4rem 1.5rem; }
+    .veille-4grid { grid-template-columns: 1fr; }
+    .veille-theme-box { grid-template-columns: 1fr; text-align: center; }
   }
 </style>
 </head>
@@ -798,6 +675,7 @@
     <a href="#formation">Formation</a>
     <a href="#contact">Contact</a>
     <a href="#cv">CV</a>
+    <a href="#documents">Documents</a>
     <a href="#veille">Veille</a>
   </div>
 </nav>
@@ -852,7 +730,7 @@
         </div>
         <div class="contact-row-item">
           <div class="c-icon">✉️</div>
-          <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="224c0c435b43464b624e5250510c4450">[email&#160;protected]</a>
+          nabil.ayadi@example.com
         </div>
       </div>
     </div>
@@ -868,7 +746,6 @@
   <p class="s-sub">Des missions techniques concrètes en administration réseau, support et infrastructure.</p>
 
   <div class="timeline">
-
     <div class="tl-item">
       <div class="tl-dot"></div>
       <div class="tl-date">Depuis août 2025 · Alternance</div>
@@ -916,7 +793,6 @@
         <li>Assistance technique aux équipes : prise en charge des demandes, dépannage de premier niveau</li>
       </ul>
     </div>
-
   </div>
 </section>
 
@@ -929,7 +805,6 @@
   <p class="s-sub">Un profil SISR complet, de l'administration système à la sécurité réseau.</p>
 
   <div class="skills-grid">
-
     <div class="sk-card">
       <div class="sk-icon">🖥️</div>
       <div class="sk-title">Systèmes & OS</div>
@@ -940,7 +815,6 @@
         <span class="tag">Droits & GPO</span>
       </div>
     </div>
-
     <div class="sk-card">
       <div class="sk-icon">🌐</div>
       <div class="sk-title">Réseaux & Sécurité</div>
@@ -952,7 +826,6 @@
         <span class="tag">DHCP / DNS</span>
       </div>
     </div>
-
     <div class="sk-card">
       <div class="sk-icon">💻</div>
       <div class="sk-title">Virtualisation</div>
@@ -962,7 +835,6 @@
         <span class="tag">VMs (AD, pfSense, Exchange)</span>
       </div>
     </div>
-
     <div class="sk-card">
       <div class="sk-icon">📊</div>
       <div class="sk-title">Supervision & Gestion</div>
@@ -973,7 +845,6 @@
         <span class="tag">Continuité de service</span>
       </div>
     </div>
-
     <div class="sk-card">
       <div class="sk-icon">⌨️</div>
       <div class="sk-title">Langages & Outils</div>
@@ -984,7 +855,6 @@
         <span class="tag">GitHub</span>
       </div>
     </div>
-
     <div class="sk-card">
       <div class="sk-icon">🤝</div>
       <div class="sk-title">Savoir-être</div>
@@ -995,10 +865,8 @@
         <span class="tag">Support utilisateurs</span>
       </div>
     </div>
-
   </div>
 
-  <!-- CERTIFICATIONS -->
   <div style="margin-top:3rem;">
     <div class="s-label">Certifications obtenues</div>
     <div class="certs-row" style="margin-top:1.2rem;">
@@ -1060,7 +928,7 @@
           <div class="ci-icon">✉️</div>
           <div>
             <div class="ci-lbl">Email</div>
-            <div class="ci-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3957175840585d507955494b4a175f4b">[email&#160;protected]</a></div>
+            <div class="ci-val">nabil.ayadi@example.com</div>
           </div>
         </div>
         <div class="ci-item">
@@ -1076,7 +944,7 @@
     <div class="cta-box">
       <h3>UNE OPPORTUNITÉ ?</h3>
       <p>Je suis disponible pour tout échange autour d'un poste en alternance ou d'une opportunité en systèmes & réseaux. N'hésitez pas à me contacter directement.</p>
-      <a href="/cdn-cgi/l/email-protection#264808475f47424f664a565455084054" class="btn-cyan">Envoyer un email</a>
+      <a href="mailto:nabil.ayadi@example.com" class="btn-cyan">Envoyer un email</a>
     </div>
   </div>
 </div>
@@ -1094,10 +962,10 @@
     <h3>Accès restreint</h3>
     <p>Ce document est protégé. Entrez le mot de passe pour consulter le CV complet de Nabil Ayadi.</p>
     <div class="input-row">
-      <input class="pw-input" id="cvInput" type="password" placeholder="Mot de passe…" onkeydown="if(event.key==='Enter') checkPw()">
-      <button class="btn-cyan" onclick="checkPw()" style="white-space:nowrap">Accéder →</button>
+      <input class="pw-input-cv" id="cvInput" type="password" placeholder="Mot de passe…" onkeydown="if(event.key==='Enter') checkCvPw()">
+      <button class="btn-cyan" onclick="checkCvPw()" style="white-space:nowrap;padding:0.7rem 1.2rem;">Accéder →</button>
     </div>
-    <div class="err-msg" id="cvErr">Mot de passe incorrect.</div>
+    <div class="err-msg-cv" id="cvErr">Mot de passe incorrect.</div>
   </div>
 
   <div class="cv-content" id="cvContent">
@@ -1107,57 +975,25 @@
         <span style="font-size:0.75rem;color:var(--muted);">BTS SIO SISR · 2024–2026</span>
       </div>
       <div class="cv-body">
-
         <div class="cv-left">
           <div class="cv-av">NA</div>
-
           <div class="cv-sh">Contact</div>
           <div class="cv-li">📞 07 67 95 78 83</div>
-          <div class="cv-li">✉️ <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="452b6b243c24212c05293537366b2337">[email&#160;protected]</a></div>
+          <div class="cv-li">✉️ nabil.ayadi@example.com</div>
           <div class="cv-li">📍 Garges-lès-Gonesse (95)</div>
-
           <div class="cv-sh">Formation</div>
           <div class="cv-li"><strong>BTS SIO SISR</strong>Lycée Robert Schuman, Dugny · 2026</div>
           <div class="cv-li"><strong>Bac SN</strong>Lycée Robert Schuman, Dugny · 2024</div>
-
           <div class="cv-sh">Certifications</div>
-          <div class="cv-tags">
-            <span class="cv-tag">CCNA 1</span>
-            <span class="cv-tag">PIX</span>
-          </div>
-
+          <div class="cv-tags"><span class="cv-tag">CCNA 1</span><span class="cv-tag">PIX</span></div>
           <div class="cv-sh">Systèmes</div>
-          <div class="cv-tags">
-            <span class="cv-tag">Windows Server</span>
-            <span class="cv-tag">Linux</span>
-            <span class="cv-tag">Active Directory</span>
-            <span class="cv-tag">Hyper-V</span>
-            <span class="cv-tag">Proxmox</span>
-          </div>
-
+          <div class="cv-tags"><span class="cv-tag">Windows Server</span><span class="cv-tag">Linux</span><span class="cv-tag">Active Directory</span><span class="cv-tag">Hyper-V</span><span class="cv-tag">Proxmox</span></div>
           <div class="cv-sh">Réseaux</div>
-          <div class="cv-tags">
-            <span class="cv-tag">Cisco</span>
-            <span class="cv-tag">pfSense</span>
-            <span class="cv-tag">VLAN</span>
-            <span class="cv-tag">DMZ</span>
-            <span class="cv-tag">NAT</span>
-          </div>
-
+          <div class="cv-tags"><span class="cv-tag">Cisco</span><span class="cv-tag">pfSense</span><span class="cv-tag">VLAN</span><span class="cv-tag">DMZ</span><span class="cv-tag">NAT</span></div>
           <div class="cv-sh">Supervision</div>
-          <div class="cv-tags">
-            <span class="cv-tag">Zabbix</span>
-            <span class="cv-tag">GLPI</span>
-            <span class="cv-tag">Exchange</span>
-          </div>
-
+          <div class="cv-tags"><span class="cv-tag">Zabbix</span><span class="cv-tag">GLPI</span><span class="cv-tag">Exchange</span></div>
           <div class="cv-sh">Langages</div>
-          <div class="cv-tags">
-            <span class="cv-tag">HTML/CSS</span>
-            <span class="cv-tag">C#</span>
-            <span class="cv-tag">SQL</span>
-            <span class="cv-tag">GitHub</span>
-          </div>
+          <div class="cv-tags"><span class="cv-tag">HTML/CSS</span><span class="cv-tag">C#</span><span class="cv-tag">SQL</span><span class="cv-tag">GitHub</span></div>
         </div>
 
         <div class="cv-right">
@@ -1205,7 +1041,6 @@
             </ul>
           </div>
         </div>
-
       </div>
     </div>
   </div>
@@ -1213,71 +1048,124 @@
 
 <hr class="divider">
 
-<!-- VEILLE TECHNOLOGIQUE -->
+<!-- DOCUMENTS PROTÉGÉS -->
+<section id="documents" style="max-width:1200px;margin:0 auto;padding:6rem 3rem;position:relative;z-index:1;">
+  <div class="s-label">Documents confidentiels</div>
+  <h2 class="s-title">Documents</h2>
+  <p class="s-sub">Accès protégé par mot de passe. Ces fichiers sont réservés aux recruteurs et professionnels.</p>
+
+  <div class="docs-grid">
+
+    <!-- CV PDF -->
+    <div class="doc-card">
+      <div class="doc-card-head">
+        <div class="doc-icon">📄</div>
+        <div>
+          <div class="doc-title">CV — Nabil Ayadi</div>
+          <div class="doc-sub">CV-AYADI-Nabil.pdf</div>
+        </div>
+      </div>
+      <div class="doc-card-body">
+        <div class="doc-lock-area" id="lock-cv-pdf">
+          <p style="font-size:0.82rem;color:var(--muted);margin-bottom:0.8rem;">🔒 Document protégé — entrez le mot de passe pour accéder au CV complet.</p>
+          <input class="pw-input" type="password" placeholder="Mot de passe…" id="pw-cv-pdf" onkeydown="if(event.key==='Enter') unlockDoc('cv-pdf')">
+          <div class="err-msg" id="err-cv-pdf">Mot de passe incorrect.</div>
+          <button class="btn-unlock" onclick="unlockDoc('cv-pdf')">Déverrouiller →</button>
+        </div>
+        <div class="doc-open-area" id="open-cv-pdf">
+          <p style="font-size:0.82rem;color:var(--muted);margin-bottom:1rem;">✅ Accès accordé — téléchargez le document ci-dessous.</p>
+          <a href="CV-AYADI-Nabil.pdf" target="_blank" class="doc-dl-btn">📥 Télécharger CV-AYADI-Nabil.pdf</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contexte HSP -->
+    <div class="doc-card">
+      <div class="doc-card-head">
+        <div class="doc-icon">📋</div>
+        <div>
+          <div class="doc-title">Contexte HSP</div>
+          <div class="doc-sub">Contexte-HSP.pdf</div>
+        </div>
+      </div>
+      <div class="doc-card-body">
+        <div class="doc-lock-area" id="lock-contexte">
+          <p style="font-size:0.82rem;color:var(--muted);margin-bottom:0.8rem;">🔒 Document protégé — entrez le mot de passe pour accéder au document.</p>
+          <input class="pw-input" type="password" placeholder="Mot de passe…" id="pw-contexte" onkeydown="if(event.key==='Enter') unlockDoc('contexte')">
+          <div class="err-msg" id="err-contexte">Mot de passe incorrect.</div>
+          <button class="btn-unlock" onclick="unlockDoc('contexte')">Déverrouiller →</button>
+        </div>
+        <div class="doc-open-area" id="open-contexte">
+          <p style="font-size:0.82rem;color:var(--muted);margin-bottom:1rem;">✅ Accès accordé — téléchargez le document ci-dessous.</p>
+          <a href="Contexte-HSP.pdf" target="_blank" class="doc-dl-btn">📥 Télécharger Contexte-HSP.pdf</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tableau Nabil -->
+    <div class="doc-card">
+      <div class="doc-card-head">
+        <div class="doc-icon">📊</div>
+        <div>
+          <div class="doc-title">Tableau de synthèse</div>
+          <div class="doc-sub">tableau-nabil.pdf</div>
+        </div>
+      </div>
+      <div class="doc-card-body">
+        <div class="doc-lock-area" id="lock-tableau">
+          <p style="font-size:0.82rem;color:var(--muted);margin-bottom:0.8rem;">🔒 Document protégé — entrez le mot de passe pour accéder au tableau.</p>
+          <input class="pw-input" type="password" placeholder="Mot de passe…" id="pw-tableau" onkeydown="if(event.key==='Enter') unlockDoc('tableau')">
+          <div class="err-msg" id="err-tableau">Mot de passe incorrect.</div>
+          <button class="btn-unlock" onclick="unlockDoc('tableau')">Déverrouiller →</button>
+        </div>
+        <div class="doc-open-area" id="open-tableau">
+          <p style="font-size:0.82rem;color:var(--muted);margin-bottom:1rem;">✅ Accès accordé — téléchargez le document ci-dessous.</p>
+          <a href="tableau-nabil.pdf" target="_blank" class="doc-dl-btn">📥 Télécharger tableau-nabil.pdf</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- VEILLE TECHNOLOGIQUE — IA -->
 <section id="veille" style="max-width:1200px;margin:0 auto;padding:6rem 3rem;position:relative;z-index:1;">
   <div class="s-label">Veille technologique</div>
-  <h2 class="s-title">Virtualisation & Cloud</h2>
-  <p class="s-sub">Suivi des évolutions technologiques autour de la virtualisation et des infrastructures cloud, dans le cadre du BTS SIO SISR.</p>
+  <h2 class="s-title">Intelligence Artificielle</h2>
+  <p class="s-sub">Suivi des évolutions de l'IA appliquée à l'administration système et réseau, dans le cadre du BTS SIO SISR.</p>
 
-  <!-- INTRO -->
-  <div style="background:rgba(0,212,255,0.04);border:1px solid rgba(0,212,255,0.15);border-radius:14px;padding:2rem;margin-bottom:3rem;display:grid;grid-template-columns:auto 1fr;gap:1.5rem;align-items:center;">
-    <div style="width:52px;height:52px;border-radius:12px;background:rgba(0,212,255,0.1);border:1px solid rgba(0,212,255,0.2);display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;">☁️</div>
+  <!-- THÈME -->
+  <div class="veille-theme-box">
+    <div class="veille-shield">🛡️</div>
     <div>
-      <div style="font-weight:600;font-size:1rem;margin-bottom:0.4rem;">Pourquoi ce sujet ?</div>
-      <p style="font-size:0.87rem;color:var(--muted);line-height:1.7;">La virtualisation et le cloud transforment profondément les infrastructures IT des entreprises. En tant que futur administrateur SISR, j'ai déjà manipulé Hyper-V et Proxmox en formation. Comprendre les évolutions vers le cloud hybride et les technologies de conteneurisation est devenu indispensable pour mon profil.</p>
+      <div class="veille-theme-title">Thème : Intelligence Artificielle (IA)</div>
+      <div class="veille-theme-sub">Sujet : L'impact de l'intelligence artificielle sur l'administration système et réseau</div>
     </div>
   </div>
 
-  <!-- 3 CARDS THÉMATIQUES -->
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.2rem;margin-bottom:3rem;">
+  <!-- 4 CARDS -->
+  <div class="veille-4grid">
 
-    <div class="sk-card" style="opacity:1;transform:none;">
-      <div class="sk-icon">🖥️</div>
-      <div class="sk-title">La Virtualisation</div>
-      <p style="font-size:0.82rem;color:var(--muted);line-height:1.7;margin-bottom:1rem;">Permet de faire tourner plusieurs OS sur une seule machine physique via un hyperviseur :</p>
-      <ul class="tl-bullets" style="list-style:none;margin-bottom:1rem;">
-        <li><strong style="color:var(--text);">Type 1 (bare-metal)</strong> — directement sur le matériel : Hyper-V, Proxmox, VMware ESXi</li>
-        <li><strong style="color:var(--text);">Type 2 (hosted)</strong> — sur un OS existant : VirtualBox, VMware Workstation</li>
-      </ul>
-      <div class="tags">
-        <span class="tag">Hyper-V</span>
-        <span class="tag">Proxmox</span>
-        <span class="tag">VMware ESXi</span>
-        <span class="tag">VirtualBox</span>
-      </div>
+    <div class="veille-card">
+      <div class="veille-card-title">Automatisation des tâches</div>
+      <p>L'IA automatise les opérations répétitives comme la gestion des comptes, les mises à jour, les sauvegardes et certaines interventions de maintenance, libérant du temps pour les tâches à plus forte valeur ajoutée.</p>
     </div>
 
-    <div class="sk-card" style="opacity:1;transform:none;">
-      <div class="sk-icon">🌐</div>
-      <div class="sk-title">Le Cloud Computing</div>
-      <p style="font-size:0.82rem;color:var(--muted);line-height:1.7;margin-bottom:1rem;">Ressources informatiques à la demande via Internet. Trois modèles de déploiement :</p>
-      <ul class="tl-bullets" style="list-style:none;margin-bottom:1rem;">
-        <li><strong style="color:var(--text);">Cloud public</strong> — mutualisé : AWS, Azure, Google Cloud</li>
-        <li><strong style="color:var(--text);">Cloud privé</strong> — infrastructure dédiée à une organisation</li>
-        <li><strong style="color:var(--text);">Cloud hybride</strong> — combinaison des deux, tendance dominante</li>
-      </ul>
-      <div class="tags">
-        <span class="tag">AWS</span>
-        <span class="tag">Azure</span>
-        <span class="tag">GCP</span>
-        <span class="tag">OVHcloud</span>
-      </div>
+    <div class="veille-card">
+      <div class="veille-card-title">Monitoring intelligent</div>
+      <p>Elle analyse en continu les journaux, alertes et métriques pour détecter plus rapidement les anomalies et réduire le temps d'intervention sur les incidents réseau et système.</p>
     </div>
 
-    <div class="sk-card" style="opacity:1;transform:none;">
-      <div class="sk-icon">⚙️</div>
-      <div class="sk-title">Modèles de service</div>
-      <p style="font-size:0.82rem;color:var(--muted);line-height:1.7;margin-bottom:1rem;">Trois niveaux selon la responsabilité partagée :</p>
-      <ul class="tl-bullets" style="list-style:none;margin-bottom:1rem;">
-        <li><strong style="color:var(--text);">IaaS</strong> — VMs, stockage, réseau (ex : Azure VM)</li>
-        <li><strong style="color:var(--text);">PaaS</strong> — environnement de dev géré (ex : Azure App Service)</li>
-        <li><strong style="color:var(--text);">SaaS</strong> — app directement utilisable (ex : Microsoft 365)</li>
-      </ul>
-      <div class="tags">
-        <span class="tag">IaaS</span>
-        <span class="tag">PaaS</span>
-        <span class="tag">SaaS</span>
-      </div>
+    <div class="veille-card">
+      <div class="veille-card-title">Prédiction des pannes</div>
+      <p>Grâce à l'analyse des historiques, l'IA peut anticiper les défaillances matérielles ou réseau avant qu'elles n'impactent les utilisateurs, permettant une maintenance proactive.</p>
+    </div>
+
+    <div class="veille-card">
+      <div class="veille-card-title">Optimisation des performances</div>
+      <p>Elle aide à mieux répartir la charge, ajuster les capacités et améliorer la performance globale des systèmes et des infrastructures réseau en temps réel.</p>
     </div>
 
   </div>
@@ -1288,21 +1176,21 @@
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;">
 
       <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.3rem;">
-        <div style="font-size:1.1rem;margin-bottom:0.5rem;">🐳</div>
-        <div style="font-weight:600;font-size:0.88rem;margin-bottom:0.4rem;">Conteneurisation</div>
-        <p style="font-size:0.8rem;color:var(--muted);line-height:1.6;">Docker et Kubernetes s'imposent comme standards pour déployer des apps portables et scalables, en complément de la virtualisation classique.</p>
+        <div style="font-size:1.1rem;margin-bottom:0.5rem;">🤖</div>
+        <div style="font-weight:600;font-size:0.88rem;margin-bottom:0.4rem;">AIOps</div>
+        <p style="font-size:0.8rem;color:var(--muted);line-height:1.6;">L'AIOps (Artificial Intelligence for IT Operations) combine big data et IA pour automatiser et améliorer les opérations IT, de la détection d'incidents à la résolution automatique.</p>
       </div>
 
       <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.3rem;">
-        <div style="font-size:1.1rem;margin-bottom:0.5rem;">🔒</div>
-        <div style="font-weight:600;font-size:0.88rem;margin-bottom:0.4rem;">Sécurité Cloud</div>
-        <p style="font-size:0.8rem;color:var(--muted);line-height:1.6;">Chiffrement, IAM, conformité RGPD et segmentation réseau sont devenus prioritaires dans toute architecture cloud moderne.</p>
+        <div style="font-size:1.1rem;margin-bottom:0.5rem;">🔐</div>
+        <div style="font-weight:600;font-size:0.88rem;margin-bottom:0.4rem;">Cybersécurité IA</div>
+        <p style="font-size:0.8rem;color:var(--muted);line-height:1.6;">Les SIEM nouvelle génération intègrent l'IA pour détecter les comportements anormaux, réduire les faux positifs et accélérer la réponse aux incidents de sécurité.</p>
       </div>
 
       <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.3rem;">
-        <div style="font-size:1.1rem;margin-bottom:0.5rem;">🏢</div>
-        <div style="font-weight:600;font-size:0.88rem;margin-bottom:0.4rem;">Infrastructure hybride</div>
-        <p style="font-size:0.8rem;color:var(--muted);line-height:1.6;">La majorité des entreprises combinent datacenter on-premise et services cloud pour maximiser flexibilité et continuité de service.</p>
+        <div style="font-size:1.1rem;margin-bottom:0.5rem;">🧠</div>
+        <div style="font-weight:600;font-size:0.88rem;margin-bottom:0.4rem;">Self-healing networks</div>
+        <p style="font-size:0.8rem;color:var(--muted);line-height:1.6;">Des réseaux capables de s'auto-diagnostiquer et s'auto-réparer grâce à l'IA commencent à s'imposer dans les grandes infrastructures, réduisant la dépendance aux interventions manuelles.</p>
       </div>
 
     </div>
@@ -1311,7 +1199,7 @@
   <!-- BILAN -->
   <div style="padding:1.8rem;background:rgba(0,212,255,0.04);border:1px solid rgba(0,212,255,0.15);border-radius:12px;">
     <div style="font-weight:600;font-size:0.88rem;color:var(--accent);margin-bottom:0.7rem;">✦ Apport personnel & lien avec ma formation</div>
-    <p style="font-size:0.85rem;color:var(--muted);line-height:1.8;">Cette veille m'a permis de mieux comprendre les choix techniques réalisés en formation et en alternance. L'utilisation de Hyper-V et Proxmox pour créer mes VMs (pfSense, Zabbix, Exchange, GLPI) s'inscrit directement dans cette évolution vers des infrastructures virtualisées. À terme, je souhaite approfondir Microsoft Azure, qui s'impose comme référence cloud pour les environnements Windows Server, et ainsi évoluer vers l'administration d'infrastructures hybrides.</p>
+    <p style="font-size:0.85rem;color:var(--muted);line-height:1.8;">Cette veille m'a permis de comprendre comment l'IA transforme le métier d'administrateur systèmes et réseaux. Les outils de supervision comme Zabbix, que j'utilise en formation, s'orientent de plus en plus vers des fonctionnalités prédictives basées sur l'IA. En alternance chez Saint-Vincent de Paul, le monitoring et le support N1/N2 pourraient bénéficier de ces avancées. À terme, je souhaite me former aux outils AIOps et intégrer ces pratiques dans ma future carrière en administration d'infrastructures.</p>
   </div>
 
 </section>
@@ -1320,13 +1208,31 @@
   <p>© 2025 Nabil Ayadi — Portfolio</p>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  const CV_PW = 'ayadi2026';
+<script>
+  const DOC_PW = '75Support95!';
+  const CV_PW  = 'ayadi2026';
 
-  function checkPw() {
-    const input = document.getElementById('cvInput');
-    const err = document.getElementById('cvErr');
-    const lock = document.getElementById('cvLock');
+  function unlockDoc(id) {
+    const input   = document.getElementById('pw-' + id);
+    const err     = document.getElementById('err-' + id);
+    const lockEl  = document.getElementById('lock-' + id);
+    const openEl  = document.getElementById('open-' + id);
+
+    if (input.value === DOC_PW) {
+      lockEl.classList.add('hidden');
+      openEl.classList.add('visible');
+    } else {
+      input.classList.add('error');
+      err.style.display = 'block';
+      setTimeout(() => input.classList.remove('error'), 350);
+      input.value = '';
+    }
+  }
+
+  function checkCvPw() {
+    const input   = document.getElementById('cvInput');
+    const err     = document.getElementById('cvErr');
+    const lock    = document.getElementById('cvLock');
     const content = document.getElementById('cvContent');
 
     if (input.value === CV_PW) {
@@ -1335,7 +1241,7 @@
       content.scrollIntoView({ behavior: 'smooth', block: 'start' });
     } else {
       input.classList.add('error');
-       err.style.display = 'block';
+      err.style.display = 'block';
       setTimeout(() => input.classList.remove('error'), 350);
       input.value = '';
     }
